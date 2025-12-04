@@ -12,7 +12,7 @@ Item {
             color: Material.primary
         }
         Text {
-            text: "Դուք հաջողությամբ մուտք եք գործել :blush:"
+            text: "Դուք հաջողությամբ մուտք եք գործել"
             font.pixelSize: 16
         }
         Button {
@@ -21,7 +21,7 @@ Item {
                 apiClient.clearToken()
                 stackView.pop(StackView.Immediate)
                 stackView.clear()
-                stackView.push("qrc:/pages/LoginPage.qml")
+                stackView.push("qrc:/new/prefix1/LoginPage.qml")
             }
         }
     }

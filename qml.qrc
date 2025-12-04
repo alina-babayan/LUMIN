@@ -5,5 +5,9 @@
         <file>LoginPage.qml</file>
         <file>MainDashboard.qml</file>
         <file>OTPVerificationPage.qml</file>
+        <file>image.jpg.jpg</file>
+        <file>RegisterPage.qml</file>
+        <file>MainWindow.qml</file>
+        <file>DashboardPage.qml</file>
     </qresource>
 </RCC>

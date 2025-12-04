@@ -1,6 +1,6 @@
 #include "QmlTypes.h"
 #include <QQmlEngine>
-#include "ApiClient.h"
+#include "apiclient.h"
 #include "TokenStorage.h"
 
 void registerQmlTypes()

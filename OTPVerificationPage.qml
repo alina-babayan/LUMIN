@@ -154,7 +154,7 @@ Item {
         apiClient.post(ApiEndpoints.VERIFY_LOGIN_URL, requestData, function(response) {
             loadingIndicator.running = false
             if (response.success) {
-                stackView.replace("qrc:/pages/MainDashboard.qml")
+                stackView.replace("qrc:/new/prefix1/MainWindow.qml", {user: response.data.user})
             } else {
                 errorText.text = response.message || "Invalid code"
                 clearInputs()

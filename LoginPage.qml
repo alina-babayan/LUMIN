@@ -8,26 +8,29 @@ Item {
     Material.accent: Material.Green
     // Background image
     Image {
-        source: "qrc:/images/student_background.jpg"
+        source: "qrc:/new/prefix1/image.jpg.jpg"
         anchors.fill: parent
-        fillMode: Image.PreserveAspectCrop
-        opacity: 0.7
+        fillMode: Image.PreserveAspectFit
+        opacity: 1.0
     }
-    Rectangle {
-        anchors.fill: parent
-        color: "#FFFFFF"
-        opacity: 0.3
-    }
+    // Rectangle {
+    //     anchors.fill: parent
+    //     color: "#FFFFFF"
+    //     opacity: 0.3
+    // }
     ColumnLayout {
-        anchors.centerIn: parent
-        spacing: 20
-        width: parent.width * 0.6
+        anchors.left: parent.left
+        anchors.leftMargin: 20
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 200
+        spacing: 15
+        width: parent.width * 0.4
         Text {
-            text: "Welcome to Lumin"
-            font.pixelSize: 24
+            text: "Welcome to Lumin !"
+            font.pixelSize: 28
             font.bold: true
             color: Material.primary
-            Layout.alignment: Qt.AlignHCenter
+            Layout.alignment: Qt.AlignLeft
         }
         TextField {
             id: emailField
@@ -60,7 +63,7 @@ Item {
         Button {
             text: "Login"
             Layout.fillWidth: true
-            Layout.maximumWidth: 200
+            Layout.maximumWidth: 300
             Layout.alignment: Qt.AlignHCenter
             onClicked: loginFunction()
             Material.elevation: 2
@@ -75,7 +78,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
-                    onClicked: stackView.push("qrc:/pages/ForgotPasswordPage.qml")
+                    onClicked: stackView.push("qrc:/new/prefix1/ForgotPasswordPage.qml")
                 }
             }
             Text {
@@ -85,7 +88,7 @@ Item {
                 MouseArea {
                     anchors.fill: parent
                     cursorShape: Qt.PointingHandCursor
-                    onClicked: stackView.push("qrc:/pages/RegisterPage.qml")
+                    onClicked: stackView.push("qrc:/new/prefix1/RegisterPage.qml")
                 }
             }
         }
@@ -115,12 +118,12 @@ Item {
             if (response.success) {
                 var data = response.data
                 if (data.requiresVerification) {
-                    stackView.push("qrc:/pages/OTPVerificationPage.qml", {
+                    stackView.push("qrc:/new/prefix1/OTPVerificationPage.qml", {
                         maskedEmail: data.maskedEmail,
                         sessionToken: data.sessionToken
                     })
                 } else {
-                    stackView.replace("qrc:/pages/MainDashboard.qml")
+                    stackView.replace("qrc:/new/prefix1/MainWindow.qml", {user: response.data.user})
                 }
             } else {
                 errorText.text = response.message || "Login failed"

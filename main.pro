@@ -1,6 +1,7 @@
 
+    #QT += quick network charts qml gui
     QT += quick network charts qml gui
-
+    QT += quickdialogs2
     CONFIG += c++17
 
     TARGET = MyQtApp
@@ -12,6 +13,7 @@
         apiclient.h
 
     SOURCES += \
+    ApiEndpoints.cpp \
         QmlTypes.cpp \
         TokenStorage.cpp \
         apiclient.cpp \
