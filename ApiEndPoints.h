@@ -66,6 +66,9 @@ public:
 
 private:
     QString m_baseUrl = "https://learning-dashboard-rouge.vercel.app";
+    Q_PROPERTY(QString search READ search CONSTANT)
+
+    QString search() const { return m_baseUrl + "/api/search"; }
 };
 
 #endif // APIENDPOINTS_H

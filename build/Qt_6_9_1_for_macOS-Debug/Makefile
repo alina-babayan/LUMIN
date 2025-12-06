@@ -1279,12 +1279,14 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: ../../qml.qrc \
 		/Users/ina/Qt/6.9.1/macos/libexec/rcc \
+		../../SearchPage.qml \
 		../../OTPVerificationPage.qml \
 		../../RegisterPage.qml \
 		../../DashboardPage.qml \
 		../../MainDashboard.qml \
 		../../image.jpg.jpg \
 		../../LoginPage.qml \
+		../../SettingsPage.qml \
 		../../MainWindow.qml \
 		../../main.qml \
 		../../ForgotPasswordPage.qml
@@ -1361,7 +1363,7 @@ ApiEndpoints.o: ../../ApiEndpoints.cpp ../../ApiEndpoints.h \
 QmlTypes.o: ../../QmlTypes.cpp ../../QmlTypes.h \
 		/Users/ina/Qt/6.9.1/macos/lib/QtQml.framework/Headers/QQmlEngine \
 		/Users/ina/Qt/6.9.1/macos/lib/QtQml.framework/Headers/qqmlengine.h \
-		../../ApiClient.h \
+		../../apiclient.h \
 		/Users/ina/Qt/6.9.1/macos/lib/QtCore.framework/Headers/QObject \
 		/Users/ina/Qt/6.9.1/macos/lib/QtCore.framework/Headers/qobject.h \
 		/Users/ina/Qt/6.9.1/macos/lib/QtNetwork.framework/Headers/QNetworkAccessManager \

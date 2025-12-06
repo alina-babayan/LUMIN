@@ -51,7 +51,8 @@ template <> constexpr inline auto ApiEndpoints::qt_create_metaobjectdata<qt_meta
         "removeProfileImage",
         "refresh",
         "notifications",
-        "readAllNotifications"
+        "readAllNotifications",
+        "search"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -83,6 +84,8 @@ template <> constexpr inline auto ApiEndpoints::qt_create_metaobjectdata<qt_meta
         QtMocHelpers::PropertyData<QString>(12, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
         // property 'readAllNotifications'
         QtMocHelpers::PropertyData<QString>(13, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'search'
+        QtMocHelpers::PropertyData<QString>(14, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -118,6 +121,7 @@ void ApiEndpoints::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 10: *reinterpret_cast<QString*>(_v) = _t->refresh(); break;
         case 11: *reinterpret_cast<QString*>(_v) = _t->notifications(); break;
         case 12: *reinterpret_cast<QString*>(_v) = _t->readAllNotifications(); break;
+        case 13: *reinterpret_cast<QString*>(_v) = _t->search(); break;
         default: break;
         }
     }
@@ -145,7 +149,7 @@ int ApiEndpoints::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

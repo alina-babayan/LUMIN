@@ -9,5 +9,7 @@
         <file>RegisterPage.qml</file>
         <file>MainWindow.qml</file>
         <file>DashboardPage.qml</file>
+        <file>SettingsPage.qml</file>
+        <file>SearchPage.qml</file>
     </qresource>
 </RCC>
